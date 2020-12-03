@@ -31,6 +31,7 @@
         android:ems="10"
         android:hint="@string/lblEditText"
         android:inputType="textPersonName"
+        android:maxLength="15"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
