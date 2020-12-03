@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Basic Android App</string>
+    <string name="lblDatos">Datos del ejercicio</string>
+    <string name="lblEditText">Ingrese los datos</string>
+    <string name="lblEjercicio">Seleccione el ejercicio</string>
+    <string name="btnCalcular">Calcular</string>
+
+    <string-array name="exOptions">
+        <item>Estado estudiante</item>
+        <item>Raíces de una ecuación</item>
+        <item>Año bisiesto</item>
+        <item>Mi edad exacta</item>
+        <item>MCM</item>
+    </string-array>
 </resources>
