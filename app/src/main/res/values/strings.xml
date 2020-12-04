@@ -15,12 +15,12 @@
     </string-array>
 
     <string name="lbl1">Ingrese la nota</string>
-    <string name="lbl2">Ingrese una ecuacion de segundo grado</string>
+    <string name="lbl2">Ingrese una ecuacion(ax^2+bx+c)</string>
     <string name="lbl3">Ingrese un año</string>
     <string name="lbl4">Ingrese una fecha</string>
     <string name="lbl5">Ingrese tres numeros</string>
 
-<!--    Strings of StudentStatus Activity-->
+    <!--    Strings of StudentStatus Activity-->
     <string name="studentStatus">Estado del estudiante</string>
     <string name="lblmessage">El estudiante se encuentra:</string>
     <string name="bad_opt">MALO</string>
@@ -29,8 +29,15 @@
     <string name="excellent_opt">EXCELENTE</string>
 
     <!--    Strings of SQRT Activity -->
-<!--    Strings of LeapYear Activity-->
-<!--    Strings of MyExactYear Activity-->
-<!--    Strings of MCM Activity-->
+    <string name="roots_title">Ecuación de segundo grado</string>
+    <string name="equation">1x^2 + 4x +8</string>
+    <string name="lblroots">Las raices son:</string>
+    <string name="root1"> sol1</string>
+    <string name="root2">sol2</string>
+    <string name="no_sol">SIN SOLUCION</string>
+
+    <!--    Strings of LeapYear Activity-->
+    <!--    Strings of MyExactYear Activity-->
+    <!--    Strings of MCM Activity-->
 
 </resources>

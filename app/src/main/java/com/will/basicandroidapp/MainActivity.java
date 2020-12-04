@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 break;
             case 1:
                 text.setText(R.string.lbl2);
-                this.etData.setHint("Ej: 2x^2 + 10x + 3");
+                this.etData.setHint("Ej: 2;4;8");
                 break;
             case 2:
                 text.setText(R.string.lbl3);
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private void onClick(View v) {
         String data = this.etData.getText().toString().trim();
-        if (data == null || data.equals("")) {
+        if (data.equals("")) {
             Toast.makeText(this, "Por favor ingrese los datos.", Toast.LENGTH_LONG).show();
             return;
         }
@@ -81,7 +81,29 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Intent nextPage = null;
         switch (selectedItem) {
             case 1:
-                Toast.makeText(this, "Ejercicio 2", Toast.LENGTH_LONG).show();
+                nextPage = new Intent(this, EcRoots.class);
+                try {
+                    String[] values = data.split(";");
+                    int a = Integer.parseInt(values[0]),
+                            b = Integer.parseInt(values[1]),
+                            c = Integer.parseInt(values[2]);
+                    if (values.length > 3) {
+                        this.showToast("Solo puede ingresar 3 valores.");
+                        return;
+                    }
+
+                    if (a == 0) {
+                        this.showToast("el valor de a debe ser diferente de 0.");
+                        return;
+                    }
+
+                    nextPage.putExtra("a", a);
+                    nextPage.putExtra("b", b);
+                    nextPage.putExtra("c", c);
+                } catch (Exception ex) {
+                    this.showToast("Ingrese los valores en el formato a;b;c");
+                    return;
+                }
                 break;
             case 2:
                 Toast.makeText(this, " el 3", Toast.LENGTH_LONG).show();
