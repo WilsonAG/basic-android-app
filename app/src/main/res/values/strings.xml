@@ -43,6 +43,16 @@
     <string name="leap_year_false">No es un año bisiesto</string>
 
     <!--    Strings of MyExactYear Activity-->
+    <string name="MEA_title">Mi Edad exacta</string>
+    <string name="MEA_date">xx/xx/xxxx</string>
+    <string name="MEA_desc">Mi edad en:</string>
+    <string name="MEA_years">Años: xx</string>
+    <string name="MEA_months">Meses: xxx</string>
+    <string name="MEA_days">Dias: 15xxx</string>
+    <string name="MEA_hours">Horas: 21xxx</string>
+    <string name="MEA_mins">Minutos: zzzz</string>
+    <string name="MEA_secs">Segundos: xxxx</string>
+
     <!--    Strings of MCM Activity-->
 
 </resources>

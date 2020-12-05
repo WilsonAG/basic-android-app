@@ -120,7 +120,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 }
                 break;
             case 3:
-                Toast.makeText(this, "el 4", Toast.LENGTH_LONG).show();
+                nextPage = new Intent(this, MyExcatAge.class);
+                String datePattern = "(0[1-9]|[12][0-9]|3[01])[/](0[1-9]|1[012])[/]\\d{4}";
+                if (! data.matches(datePattern)){
+                    this.showToast("Ingrese la fecha en el formato indicado. (dd/mm/yyyy)");
+                    return;
+                }
+                nextPage.putExtra("date", data);
                 break;
             case 4:
                 Toast.makeText(this, "el 5", Toast.LENGTH_LONG).show();
