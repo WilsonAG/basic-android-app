@@ -10,6 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BasicAndroidApp">
+        <activity android:name=".LeapYear" />
         <activity android:name=".EcRoots" />
         <activity android:name=".StudentStatus" />
         <activity

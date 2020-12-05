@@ -106,7 +106,18 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 }
                 break;
             case 2:
-                Toast.makeText(this, " el 3", Toast.LENGTH_LONG).show();
+                nextPage = new Intent(this, LeapYear.class);
+                try {
+                    int year = Integer.parseInt(data);
+                    if (year < 1582 || year > 2500) {
+                        this.showToast("El año debe estar entre 1582 y 2500");
+                        return;
+                    }
+
+                    nextPage.putExtra("year", year);
+                } catch (Exception ex) {
+                    this.showToast("Por favor ingrese un año válido.");
+                }
                 break;
             case 3:
                 Toast.makeText(this, "el 4", Toast.LENGTH_LONG).show();

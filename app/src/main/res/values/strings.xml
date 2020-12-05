@@ -37,6 +37,11 @@
     <string name="no_sol">SIN SOLUCION</string>
 
     <!--    Strings of LeapYear Activity-->
+    <string name="leap_year_title">Año Bisiesto</string>
+    <string name="leap_year_year">2020</string>
+    <string name="leap_year_true">Es un año bisiesto</string>
+    <string name="leap_year_false">No es un año bisiesto</string>
+
     <!--    Strings of MyExactYear Activity-->
     <!--    Strings of MCM Activity-->
 
