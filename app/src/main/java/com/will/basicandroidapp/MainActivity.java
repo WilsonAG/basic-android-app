@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             return;
         }
 
-        Intent nextPage = null;
+        Intent nextPage;
         switch (selectedItem) {
             case 1:
                 nextPage = new Intent(this, EcRoots.class);
@@ -129,7 +129,25 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 nextPage.putExtra("date", data);
                 break;
             case 4:
-                Toast.makeText(this, "el 5", Toast.LENGTH_LONG).show();
+                nextPage = new Intent(this, MCM.class);
+                try {
+                    String[] values = data.split(";");
+                    int a = Integer.parseInt(values[0]),
+                            b = Integer.parseInt(values[1]),
+                            c = Integer.parseInt(values[2]);
+                    if (values.length > 3) {
+                        this.showToast("Solo puede ingresar 3 valores.");
+                        return;
+                    }
+
+                    nextPage.putExtra("a", a);
+                    nextPage.putExtra("b", b);
+                    nextPage.putExtra("c", c);
+                } catch (Exception ex) {
+                    this.showToast("Ingrese los valores en el formato a;b;c");
+                    return;
+                }
+
                 break;
             case 0:
             default:

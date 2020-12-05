@@ -54,5 +54,9 @@
     <string name="MEA_secs">Segundos: xxxx</string>
 
     <!--    Strings of MCM Activity-->
+    <string name="MCM_title">Mínimo común divisor</string>
+    <string name="MCM_desc">El MCD de ## es:</string>
+    <string name="MCM_number">##</string>
+
 
 </resources>
