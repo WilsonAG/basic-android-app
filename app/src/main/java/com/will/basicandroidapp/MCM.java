@@ -1,8 +1,10 @@
 package com.will.basicandroidapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 public class MCM extends AppCompatActivity {
@@ -11,6 +13,9 @@ public class MCM extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_m_c_m);
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         TextView tvDesc = findViewById(R.id.MCM_desc);
         TextView tvnumber = findViewById(R.id.MCM_number);
@@ -38,5 +43,14 @@ public class MCM extends AppCompatActivity {
             return a;
         }
         return mcd(b, a % b);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

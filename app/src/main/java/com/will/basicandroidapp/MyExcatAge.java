@@ -1,10 +1,12 @@
 package com.will.basicandroidapp;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import java.time.LocalDate;
@@ -27,6 +29,9 @@ public class MyExcatAge extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_excat_age);
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         TextView date = findViewById(R.id.mae_date);
 
@@ -64,5 +69,14 @@ public class MyExcatAge extends AppCompatActivity {
         this.hours.setText(new StringBuilder("Horas: ").append(hours));
         this.minutes.setText(new StringBuilder("Minutos: ").append(mins));
         this.seconds.setText(new StringBuilder("Segundos: ").append(secs));
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

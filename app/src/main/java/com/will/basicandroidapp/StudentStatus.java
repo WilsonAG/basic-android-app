@@ -1,8 +1,10 @@
 package com.will.basicandroidapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 public class StudentStatus extends AppCompatActivity {
@@ -13,6 +15,9 @@ public class StudentStatus extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_status);
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         this.status = findViewById(R.id.tvStatus);
 
@@ -32,5 +37,14 @@ public class StudentStatus extends AppCompatActivity {
         } else if(grade >= 19 && grade <= 20) {
             this.status.setText(R.string.excellent_opt);
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
